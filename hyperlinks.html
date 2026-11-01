@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSIT Student Media</title>
+
+    <style>
+      body {
+        background-color: #fff0f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        color: #4a4a4a;
+      }
+
+      .main-content {
+        background-color: white;
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 35px;
+        border: 2px solid #ffe4e1;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        animation: appear 1s ease;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(25px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 15px;
+        transition: transform 2s ease;
+      }
+
+      /* Rotate the logo when hovered */
+      .logo:hover {
+        transform: rotate(360deg);
+      }
+
+      h1,
+      h2 {
+        color: #ff69b4;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 22px;
+        border-bottom: 2px dashed #ffb6c1;
+        padding-bottom: 10px;
+        margin-top: 35px;
+      }
+
+      .media-section {
+        background-color: #fffafd;
+        border: 1px solid #ffe4e1;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.12);
+      }
+
+      .media-section:hover {
+        box-shadow: 0 8px 18px rgba(255, 105, 180, 0.25);
+      }
+
+      video {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      audio {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      iframe {
+        width: 100%;
+        max-width: 560px;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      video,
+      iframe {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      video:hover,
+      iframe:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 18px rgba(255, 105, 180, 0.25);
+      }
+
+      audio {
+        accent-color: #ff69b4;
+      }
+
+      .button-container {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .btn-link {
+        display: inline-block;
+        background-color: #ff69b4;
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .btn-link:hover {
+        background-color: #ff1493;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 15px rgba(255, 105, 180, 0.4);
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid #ffe4e1;
+        margin-top: 30px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        .main-content {
+          padding: 20px 15px;
+        }
+
+        h1 {
+          font-size: 25px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .media-section {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main-content">
+      <img src="images/bsit-logo.jpg" alt="BSIT Logo" class="logo" />
+
+      <h1>BSIT Media</h1>
+
+      <section class="media-section">
+        <h2>1. Video</h2>
+        <video controls>
+          <source src="videos/vid1.mp4" type="video/mp4" />
+          Your browser does not support video playback.
+        </video>
+      </section>
+
+      <section class="media-section">
+        <h2>2. Video</h2>
+        <video controls>
+          <source src="videos/vid2.mp4" type="video/mp4" />
+          Your browser does not support video playback.
+        </video>
+      </section>
+
+      <section class="media-section">
+        <h2>1. Audio</h2>
+        <audio controls>
+          <source src="audio/audio1.wav" type="audio/wav" />
+          Your browser does not support audio playback.
+        </audio>
+      </section>
+
+      <section class="media-section">
+        <h2>2. Audio</h2>
+        <audio controls>
+          <source src="audio/audio2.wav" type="audio/wav" />
+          Your browser does not support audio playback.
+        </audio>
+      </section>
+
+      <section class="media-section">
+        <h2>Multimedia Embedding</h2>
+        <iframe
+          src="https://player.vimeo.com/video/907407216"
+          title="Introduction to Programming and Python"
+          allowfullscreen
+        >
+        </iframe>
+      </section>
+
+      <hr />
+
+      <div class="button-container">
+        <a href="index.html" class="btn-link">← Return Menu</a>
+      </div>
+    </main>
+  </body>
+</html>

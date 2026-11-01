@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSIT Student Registration</title>
+
+    <style>
+      body {
+        background-color: #fff0f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        color: #4a4a4a;
+      }
+
+      .main-content {
+        background-color: white;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 35px;
+        border: 2px solid #ffe4e1;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        animation: appear 1s ease;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(25px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 15px;
+        transition: transform 2s ease;
+      }
+
+      /* Rotate the logo when hovered */
+      .logo:hover {
+        transform: rotate(360deg);
+      }
+
+      h1,
+      h2 {
+        color: #ff69b4;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(20, 18, 19, 0.4);
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        border-bottom: 2px dashed #ffb6c1;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        text-shadow: 2px 2px 4px rgba(29, 16, 22, 0.4);
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="date"],
+      input[type="tel"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ffb6c1;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        background-color: #fffafd;
+        color: #4a4a4a;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 2px solid #ffb6c1;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .options {
+        line-height: 2;
+      }
+
+      .options label {
+        font-weight: normal;
+        margin-right: 12px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        accent-color: #ff69b4;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      .btn-link {
+        display: inline-block;
+        background-color: #ff69b4;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 12px 22px;
+        border: none;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .btn-link:hover {
+        background-color: #ff1493;
+      }
+
+      .clear-btn {
+        background-color: #d98ba7;
+      }
+
+      .clear-btn:hover {
+        background-color: #bd6688;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid #ffe4e1;
+        margin-top: 30px;
+      }
+
+      footer {
+        text-align: center;
+        color: #777777;
+        font-size: 13px;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        .main-content {
+          padding: 22px 16px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .button-container {
+          flex-direction: column;
+        }
+
+        .btn-link {
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main-content">
+      <img src="images/bsit-logo.jpg" alt="BSIT Logo" class="logo" />
+
+      <h1>BSIT Student Registration</h1>
+
+      <p><b>Welcome to the BSIT Student Registration</b></p>
+
+      <h2>Student Registration Form</h2>
+
+      <div class="form-container">
+        <form>
+          <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="15"
+              max="100"
+              placeholder="18"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" />
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              placeholder="09XXXXXXXXX"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="program">Program:</label>
+            <select id="program" name="program" required>
+              <option value="">-- Select Program --</option>
+              <option value="BSIT">BS Information Technology</option>
+              <option value="BSCS">BS Computer Science</option>
+              <option value="BSIS">BS Information Systems</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Year Level:</label>
+            <div class="options">
+              <input
+                type="radio"
+                id="first"
+                name="year"
+                value="1st Year"
+                required
+              />
+              <label for="first">1st Year</label>
+
+              <input type="radio" id="second" name="year" value="2nd Year" />
+              <label for="second">2nd Year</label>
+
+              <input type="radio" id="third" name="year" value="3rd Year" />
+              <label for="third">3rd Year</label>
+
+              <input type="radio" id="fourth" name="year" value="4th Year" />
+              <label for="fourth">4th Year</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Programming Skills:</label>
+            <div class="options">
+              <input type="checkbox" id="html" name="skills" value="HTML" />
+              <label for="html">HTML</label>
+
+              <input type="checkbox" id="css" name="skills" value="CSS" />
+              <label for="css">CSS</label>
+
+              <input
+                type="checkbox"
+                id="javascript"
+                name="skills"
+                value="JavaScript"
+              />
+              <label for="javascript">JavaScript</label>
+
+              <input type="checkbox" id="java" name="skills" value="Java" />
+              <label for="java">Java</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="5"
+              placeholder="Enter your complete address"
+            ></textarea>
+          </div>
+
+          <div class="button-container">
+            <button type="submit" class="btn-link">Register</button>
+            <button type="reset" class="btn-link clear-btn">Clear Form</button>
+            <a href="index.html" class="btn-link">← Return Menu</a>
+          </div>
+        </form>
+      </div>
+
+      <hr />
+    </main>
+  </body>
+</html>

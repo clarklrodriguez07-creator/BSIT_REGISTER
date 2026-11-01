@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML Forms Practice</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #fff0f5;
+        padding: 20px;
+      }
+
+      .form-container {
+        background-color: white;
+        width: 350px;
+        margin: auto;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px gray;
+        animation: fadein 2s;
+      }
+
+      h2 {
+        text-align: center;
+        color: #ff69b4;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid pink;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h2>Student Registration</h2>
+
+      <form>
+        <label>Full Name:</label>
+        <input type="text" placeholder="Enter your name" />
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" />
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter password" />
+
+        <label>Age:</label>
+        <input type="number" min="1" max="100" />
+
+        <label>Birthdate:</label>
+        <input type="date" />
+
+        <label>Time:</label>
+        <input type="time" />
+
+        <label>Favorite Color:</label>
+        <input type="color" />
+
+        <label>Upload Picture:</label>
+        <input type="file" />
+
+        <label>Gender:</label><br />
+        <input type="radio" name="gender" value="Male" /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+        <input type="radio" name="gender" value="Other" /> Other <br /><br />
+
+        <label>Hobbies:</label><br />
+        <input type="checkbox" name="hobby" value="Gaming" /> Gaming
+        <input type="checkbox" name="hobby" value="Reading" /> Reading
+        <input type="checkbox" name="hobby" value="Coding" /> Coding
+        <br /><br />
+
+        <label>Course:</label>
+        <select>
+          <option value="">Select Course</option>
+          <option>BSIT</option>
+          <option>BSCS</option>
+          <option>BSHM</option>
+          <option>BEED</option>
+        </select>
+
+        <label>Address:</label>
+        <textarea rows="3" placeholder="Enter your address"></textarea>
+
+        <label>Search:</label>
+        <input type="search" placeholder="Search here" />
+
+        <label>Website:</label>
+        <input type="url" placeholder="Enter website URL" />
+
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="Enter phone number" />
+
+        <label>Range:</label>
+        <input type="range" min="0" max="100" />
+
+        <input type="submit" value="Register" />
+        <input type="reset" value="Clear Form" />
+      </form>
+    </div>
+  </body>
+</html>

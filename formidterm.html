@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Hands-On Test</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #fff0f5;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #ff69b4;
+      }
+
+      /* Flashcards using div */
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .card {
+        background-color: white;
+        width: 200px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px gray;
+        animation: fadein 2s;
+      }
+
+      /* Fade in animation */
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Appear animation */
+      .appear {
+        animation: appear 2s;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Floating animation */
+      .floating {
+        animation: floating 2s infinite;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      /* Scale transformation */
+      .scale:hover {
+        transform: scale(1.2);
+      }
+
+      /* Translate transformation */
+      .translate:hover {
+        transform: translate(10px, -10px);
+      }
+
+      /* Rotate transformation */
+      .rotate:hover {
+        transform: rotate(360deg);
+      }
+
+      /* Rotating picture endlessly */
+      .picture {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        animation: rotating 4s linear infinite;
+      }
+
+      @keyframes rotating {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Stop rotating when hovered */
+      .picture:hover {
+        animation-play-state: paused;
+      }
+
+      /* Smooth transformations */
+      .card,
+      .picture {
+        transition: transform 0.5s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Animation Flashcards</h1>
+    <p>Practice CSS animations and transformations!</p>
+
+    <div class="container">
+      <div class="card">
+        <h3>Fade In</h3>
+        <p>Gradually appears on the screen.</p>
+      </div>
+
+      <div class="card appear">
+        <h3>Appear</h3>
+        <p>Appears while growing in size.</p>
+      </div>
+
+      <div class="card floating">
+        <h3>Floating</h3>
+        <p>Moves up and down continuously.</p>
+      </div>
+
+      <div class="card scale">
+        <h3>Scale</h3>
+        <p>Hover to make the card bigger.</p>
+      </div>
+
+      <div class="card translate">
+        <h3>Translate</h3>
+        <p>Hover to move the card.</p>
+      </div>
+
+      <div class="card rotate">
+        <h3>Rotate</h3>
+        <p>Hover to tilt the card.</p>
+      </div>
+    </div>
+
+    <h2>Rotating Picture</h2>
+
+    <img
+      class="picture"
+      src="https://picsum.photos/200"
+      alt="Sample rotating picture"
+    />
+
+    <p>Hover over the picture to stop the rotation.</p>
+  </body>
+</html>

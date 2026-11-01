@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSIT Student Table</title>
+
+    <style>
+      body {
+        background-color: #fff0f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        color: #4a4a4a;
+      }
+
+      .main-content {
+        background-color: white;
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 30px;
+        border: 2px solid #ffe4e1;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        animation: appear 1s ease;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(25px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 15px;
+        transition: transform 2s ease;
+      }
+
+      /* Rotate the logo when hovered */
+      .logo:hover {
+        transform: rotate(360deg);
+      }
+
+      h1,
+      h2 {
+        color: #ff69b4;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(2, 2, 2, 0.4);
+      }
+
+      h2 {
+        border-bottom: 2px dashed #ffb6c1;
+        padding-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(19, 18, 18, 0.4);
+      }
+
+      .table-container {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+      }
+
+      th {
+        background-color: #ffb6c1;
+        color: #4a303a;
+      }
+
+      th,
+      td {
+        padding: 14px;
+        text-align: center;
+        border-bottom: 1px solid #ffe4e1;
+      }
+
+      tbody tr:hover {
+        background-color: #fff0f5;
+      }
+
+      .profile-img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #ffb6c1;
+        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+      }
+
+      .button-container {
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      .btn-link {
+        display: inline-block;
+        background-color: #ff69b4;
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-weight: bold;
+      }
+
+      .btn-link:hover {
+        background-color: #ff1493;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid #ffe4e1;
+        margin-top: 25px;
+      }
+
+      @media (max-width: 600px) {
+        .main-content {
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        th,
+        td {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main-content">
+      <img src="images/bsit-logo.jpg" alt="BSIT Logo" class="logo" />
+
+      <h1>BSIT Student Registration</h1>
+      <h2>Student Information</h2>
+
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>Profile</th>
+            <th>Student ID</th>
+            <th>Full Name</th>
+            <th>Program</th>
+            <th>Year Level</th>
+            <th>Email</th>
+          </tr>
+
+          <tr>
+            <td>
+              <a
+                href="https://www.facebook.com/lenar.vincent.payda.2025#"
+                target="_blank"
+              >
+                <img
+                  src="images/lenar.jpg"
+                  alt="Lenar Vincent Payda"
+                  class="profile-img"
+                />
+              </a>
+            </td>
+            <td>2026-001</td>
+            <td>Lenar Vincent Payda</td>
+            <td>BSIT</td>
+            <td>2nd Year</td>
+            <td>lenartraydornumber2@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="https://www.facebook.com/1kobebasanal#" target="_blank">
+                <img
+                  src="images/kobe.jpg"
+                  alt="Kobe D. Basanal"
+                  class="profile-img"
+                />
+              </a>
+            </td>
+            <td>2026-002</td>
+            <td>Kobe D. Basanal</td>
+            <td>BSIT</td>
+            <td>2nd Year</td>
+            <td>kobetraydornumber1@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a
+                href="https://www.facebook.com/clark.rodriguez.733076"
+                target="_blank"
+              >
+                <img
+                  src="images/clark.jpg"
+                  alt="Clark L. Rodriguez"
+                  class="profile-img"
+                />
+              </a>
+            </td>
+            <td>2026-003</td>
+            <td>Clark L. Rodriguez</td>
+            <td>BSIT</td>
+            <td>2nd Year</td>
+            <td>clarkieangpala-@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="https://www.facebook.com/shaquille126#" target="_blank">
+                <img
+                  src="images/wit.jpg"
+                  alt="Shaquille Wit Navises"
+                  class="profile-img"
+                />
+              </a>
+            </td>
+            <td>2026-004</td>
+            <td>Shaquille Wit Navises</td>
+            <td>BSIT</td>
+            <td>2nd Year</td>
+            <td>witdabusiness@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a
+                href="https://www.facebook.com/flintharvey.cartuciano.98#"
+                target="_blank"
+              >
+                <img
+                  src="images/flint.jpg"
+                  alt="Flint Cartuciano"
+                  class="profile-img"
+                />
+              </a>
+            </td>
+            <td>2026-005</td>
+            <td>Flint Harvey Cartuciano</td>
+            <td>BSIT</td>
+            <td>2nd Year</td>
+            <td>flintthejuicy@gmail.com</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="button-container">
+        <a href="index.html" class="btn-link">← Return Menu</a>
+      </div>
+
+      <hr />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSIT Student Registration</title>
+
+    <style>
+      /* Main webpage design */
+      body {
+        background-color: #fff0f5;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        color: #4a4a4a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Main content box */
+      .main-content {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 900px;
+        padding: 40px;
+        border-radius: 20px;
+        border: 2px solid #ffe4e1;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+
+      /* BSIT logo design */
+      .logo {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 15px;
+        transition: transform 2s ease;
+      }
+
+      /* Rotate the logo when hovered */
+      .logo:hover {
+        transform: rotate(360deg);
+      }
+
+      /* Main heading */
+      h1 {
+        color: #ff69b4;
+        font-size: 32px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(17, 9, 13, 0.4);
+      }
+
+      /* Section heading */
+      h2 {
+        color: #ff69b4;
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px dashed #ffb6c1;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(19, 17, 18, 0.4);
+      }
+
+      /* Paragraph design */
+      p {
+        color: #4a4a4a;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      /* Arrange the links */
+      .quick-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      /* Link button design */
+      .btn-link {
+        display: inline-block;
+        background-color: #ff69b4;
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        padding: 14px 20px;
+        border-radius: 25px;
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+        transition:
+          transform 0.3s ease,
+          background-color 0.3s ease;
+      }
+
+      /* Move the link button slightly upward */
+      .btn-link:hover {
+        background-color: #ff1493;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+      }
+
+      /* Description below the links */
+      .description {
+        text-align: center;
+        color: #777777;
+        line-height: 1.6;
+        margin-top: 25px;
+      }
+
+      /* Horizontal divider */
+      hr {
+        border: none;
+        border-top: 2px solid #ffe4e1;
+        margin-top: 30px;
+      }
+
+      /* Footer text */
+      footer {
+        text-align: center;
+        color: #777777;
+        font-size: 13px;
+        margin-top: 25px;
+      }
+
+      /* Adjust the design for smaller screens */
+      @media (max-width: 600px) {
+        body {
+          padding: 25px 15px;
+          align-items: flex-start;
+        }
+
+        .main-content {
+          padding: 25px 18px;
+        }
+
+        h1 {
+          font-size: 25px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .quick-links {
+          flex-direction: column;
+        }
+
+        .btn-link {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main-content">
+      <!-- BSIT logo -->
+      <img src="images/bsit-logo.jpg" alt="BSIT Logo" class="logo" />
+
+      <!-- Main title -->
+      <h1>BSIT Student Registration</h1>
+
+      <p>
+        <b>Welcome to the BSIT Student Site Made by Clark!</b>
+      </p>
+
+      <p>
+        Explore student information, view media, and access the different pages
+        of the BSIT website using the links below.
+      </p>
+
+      <!-- Website navigation links -->
+      <h2>Quick Links</h2>
+
+      <div class="quick-links">
+        <a href="table.html" class="btn-link">
+          View Student Information Table
+        </a>
+
+        <a href="hyperlinks.html" class="btn-link">View Media</a>
+
+        <a href="bsitregistration.html" class="btn-link">
+          Register Information
+        </a>
+
+        <a href="clarkhtml.html" class="btn-link">View Clarksite</a>
+      </div>
+
+      <!-- Short webpage description -->
+      <p class="description">
+        Your starting point for exploring the BSIT student website. Click a link
+        above to visit another page.
+      </p>
+
+      <hr />
+    </main>
+  </body>
+</html>
